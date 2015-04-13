@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Parallax Test</title>
+		<link rel="stylesheet" href="style.css">
+		<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+		<script type="text/javascript" src="js/parallax.js"></script>
+	</head>
+	<body>
+		<div id="cover"></div>
+		<div id="container">
+			<div id="wall">
+				<img src="img/wall.png">
+			</div>
+			<div id="couch">
+				<img src="img/couch.png">
+			</div>
+			<div id="foreground">
+				<img src="img/foreground.png">
+			</div>
+		</div>
+		<div id="info">
+			<!-- Source: http://commons.wikimedia.org/wiki/File:Infobox_info_icon.svg -->
+			<img src="img/info_icon.png" width="28px" height="28px">
+			This is a parallax demonstration.  <b>Move the mouse</b> along the X direction to move left and right in the scene, and along the Y direction to move up and down.
+		</div>
+		<script type="text/javascript">
+			objects.push(object("#wall", 0, 17));
+			objects.push(object("#couch", 0, 13));
+			objects.push(object("#foreground", 0, 2));
+			$(document).ready(function(){
+				updateObjects({clientX: 0, clientY: 0}); // Trick the function into thinking it's got an event so it doesn't throw an error when run to adjust the images initially.
+			});
+		</script>
+	</body>
+</html>
