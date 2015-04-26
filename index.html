@@ -9,13 +9,13 @@
 	</head>
 	<body>
 		<div id="container">
-			<div id="wall">
+			<div class="layer" id="wall">
 				<img src="img/wall.png">
 			</div>
-			<div id="couch">
+			<div class="layer" id="couch">
 				<img src="img/couch.png">
 			</div>
-			<div id="content">
+			<!--<div id="content">
 				<div class="header">
 					Lorem Ipsum
 				</div>
@@ -34,8 +34,11 @@
 
 					<p>Aliquam eget velit nec justo scelerisque convallis vel eget quam. Duis a consequat mi, ut pellentesque neque. Proin vulputate porttitor ipsum, ut gravida neque aliquet eu. Vestibulum in vehicula augue. Nullam finibus viverra rutrum. Etiam tempor velit nec congue fringilla. Nam egestas, neque nec suscipit gravida, mi est dapibus nibh, vel rutrum erat eros ac enim.</p>
 				</div>
+			</div>-->
+			<div class="layer" id="flowers">
+				<img src="img/flowers.png">
 			</div>
-			<div id="foreground">
+			<div class="layer" id="foreground">
 				<img src="img/foreground.png">
 			</div>
 		</div>
@@ -48,7 +51,8 @@
 			// Register parallax objects
 			objects.push(object("#wall", 0, 17));
 			objects.push(object("#couch", 0, 13));
-			objects.push(object("#content", 0, 9.5));
+			objects.push(object("#flowers", 0, 9));
+			objects.push(object("#content", 0, 4));
 			objects.push(object("#foreground", 0, 2));
 			$(document).ready(function(){
 				updateObjects({clientX: 0, clientY: 0}); // Trick the function into thinking it's got an event so it doesn't throw an error when run to adjust the images initially.

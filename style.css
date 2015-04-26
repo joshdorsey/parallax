@@ -7,20 +7,7 @@ html, body {
 	font-family: "Lato", sans-serif;
 }
 
-#couch {
-	position: absolute;
-	width: 1920px;
-	height: 1080px;
-}
-
-#couch img {
-	position: absolute;
-	right: -290px;
-	bottom: -190px;
-	width: 2500px;
-}
-
-#wall {
+.layer {
 	position: absolute;
 	width: 1920px;
 	height: 1080px;
@@ -33,20 +20,18 @@ html, body {
 	width: 2100px;
 }
 
-
-#foreground {
-	pointer-events: none; /* Allow mouse clicks to fall through */
+#couch img {
 	position: absolute;
-	width: 1920px;
-	height: 1080px;
+	right: -290px;
+	bottom: -190px;
+	width: 2500px;
 }
 
-#foreground img {
+#flowers img {
 	position: absolute;
-	z-index: 3;
-	right: -90px;
-	bottom: -90px;
-	width: 2100px;
+	left: -190px;
+	bottom: -160px;
+	width: 2300px;
 }
 
 #foreground img {
